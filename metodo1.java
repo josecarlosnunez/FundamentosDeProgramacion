@@ -9,8 +9,7 @@
   // 28/Ago/17
   *********************************/
 
-
-
+import java.util.Scanner;
 
 
 public class metodo1
@@ -18,19 +17,26 @@ public class metodo1
     public static void main(String[] args)
     {
       String nombre = "Jose Carlos";
-      String otroNombre = "Miguel";
 
-      imprime(nombre);
-      System.out.println("Entre llamada del metodo.");
-      imprime(otroNombre);
+
+      int edad = 18;
+
+      Scanner lector = new Scanner(System.in);
+
+      System.out.print("Dame tu nombre: ");
+      nombre = lector.nextLine();
+      System.out.print("Dame tu edad: ");
+      edad = lector.nextInt();
+
+      imprime(nombre, edad);
+
 
     }
 
-    public static void imprime(String nom)
+    public static void imprime(String nom, int ed)
 
      {
-       System.out.printf("Hola %s desde el metodo. %n", nom);
-
+       System.out.printf("Hola %s, Tu edad es: %d %n", nom, ed);
 
      }
   }
